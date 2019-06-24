@@ -1,0 +1,49 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.bigHeader{
+  background-image: url(./images/bonding-daylight-friends-1645634.jpg);
+  height: 100vh;
+  background-size: 100% 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav{
+  text-align: right;
+  padding: 40px;
+  background-color: black;
+}
+
+nav a{
+  text-decoration: none;
+  padding: 30px;
+  color: white;
+  font-size: 1.6em;
+}
+
+header h1{
+  color: white;
+  text-align: center;
+  font-size: 5em;
+  padding-top: 10%;
+}
+
+select.categories{
+  text-align: center;
+  width: 10%;
+  height: 50px;
+  margin-left: ;
+}
+
+.searchBox{
+  height: 50px;
+  width: 89%;
+}
+
+.searchArea{
+  width: 55%;
+  margin: auto;
+}
