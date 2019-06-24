@@ -13,7 +13,7 @@ body{
 
 nav{
   text-align: right;
-  padding: 40px;
+  padding: 30px;
   background-color: black;
 }
 
@@ -24,6 +24,10 @@ nav a{
   font-size: 1.6em;
 }
 
+nav a:hover{
+  background-color: #5C84CC;
+}
+
 header h1{
   color: white;
   text-align: center;
@@ -31,19 +35,31 @@ header h1{
   padding-top: 10%;
 }
 
-select.categories{
+.searchArea{
+  width: 55%;
+  margin: auto;
+}
+
+/* select.categories{
   text-align: center;
   width: 10%;
   height: 50px;
-  margin-left: ;
+  margin-right: 0;
+  font-size: 1.5em;
 }
+
+select.categories option{
+  font-size: 1em;
+} */
 
 .searchBox{
   height: 50px;
   width: 89%;
+  font-size: 1.5em;
 }
 
-.searchArea{
-  width: 55%;
-  margin: auto;
+.homePSearch{
+  font-size: 1.5em;
+  height: 50px;
+  width: 10%;
 }
