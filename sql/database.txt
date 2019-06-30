@@ -1,0 +1,20 @@
+CREATE TABLE User(
+Email TEXT UNIQUE PRIMARY KEY,
+Password TEXT NOT NULL,
+fName TEXT NOT NULL,
+lName TEXT NOT NULL,
+Permissions Int DEFAULT (0) NOT NULL
+);
+
+CREATE TABLE Post(
+ID TEXT UNIQUE PRIMARY KEY,
+Title TEXT NOT NULL,
+Description TEXT DEFAULT ('Empty') NOT NULL,
+DateCreated TEXT DEFAULT (datetime('now')) NOT NULL,
+Category Text DEFAULT ('General') NOT NULL,
+Email TEXT NOT NULL,
+CONSTRAINT Email_Needed
+   FOREIGN KEY (Email)
+   REFERENCES User (Email)
+   ON DELETE CASCADE
+);
