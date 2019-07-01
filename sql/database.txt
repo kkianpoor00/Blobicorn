@@ -16,6 +16,7 @@ DateCreated TEXT DEFAULT (datetime('now')) NOT NULL,
 Category Text DEFAULT ('General') NOT NULL,
 Email TEXT NOT NULL,
 Type TEXT NOT NULL,
+Cost INT,
 CONSTRAINT Email_Needed
    FOREIGN KEY (Email)
    REFERENCES User (Email)
