@@ -1,3 +1,5 @@
+PRAGMA foreign_keys = ON;
+
 CREATE TABLE User(
 Email TEXT UNIQUE PRIMARY KEY,
 Password TEXT NOT NULL,
@@ -13,6 +15,8 @@ Description TEXT DEFAULT ('Empty') NOT NULL,
 DateCreated TEXT DEFAULT (datetime('now')) NOT NULL,
 Category Text DEFAULT ('General') NOT NULL,
 Email TEXT NOT NULL,
+Type TEXT NOT NULL,
+Cost INT,
 CONSTRAINT Email_Needed
    FOREIGN KEY (Email)
    REFERENCES User (Email)
