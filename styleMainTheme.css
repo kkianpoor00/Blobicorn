@@ -30,12 +30,13 @@ nav a{
   /* font-size: 1.6em;
 }
 */
-nav a:hover{
+
+.navig > a:hover{
   background-color: #5C84CC;
 }
 
 .navigation-bar {
-  width: 100%;
+  width: 95.6%;
   height: 60px;
   background-color: black;
 
@@ -76,12 +77,13 @@ header h1{
   padding-top: 10%;
 }
 
+
 .searchArea{
   width: 55%;
   margin: auto;
 }
 
-/* seslect.categories{
+/* select.categories{
   text-align: center;
   width: 10%;
   height: 50px;
@@ -137,16 +139,17 @@ select.categories option{
   text-decoration: none;
 }
 
-.ExtraContent{
+.Vision{
   margin: 30px auto 50px;
+  padding-bottom: 10px;
 }
 
-.EC-center {
-    width: 750px;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
+.V-center {
+  width: 750px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .vision-title {
@@ -169,6 +172,71 @@ p {
   text-align: center;
 }
 
+/*---------------------- posts -----------------------*/
+
+.posting{
+  margin:0;
+  padding:0;
+
+}
+.posting{
+  font-size:100%;
+  /*margin:3em;*/
+  /*background: white; */
+  background:#666;
+  color:#fff;
+  align-content: center;
+}
+
+
+.posts-title {
+  padding-top: 20px;
+  font-size: 52px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: white;
+  display: block;
+}
+
+.posts{
+      max-width: 780px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  align-content: center;
+}
+
+ul,li{
+  list-style:none;
+}
+
+ul{
+  overflow:hidden;
+  padding:3em;
+  align-content: center;
+  display:inline-block;
+  margin:auto;
+}
+
+li{
+  display:inline-block;
+}
+
+ul li a{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:10em;
+  width:10em;
+  padding:1em;
+}
+ul li{
+  margin:1em;
+  float:left;
+}
 
 /*---------------------- footer -----------------------*/
 .footerContext{
@@ -211,7 +279,7 @@ p {
 }
 
 
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
 	.footerContext{
 		padding: 35px;
 	}
@@ -232,4 +300,4 @@ p {
 	.footerContext .footer-links a{
 		line-height: 1.8;
 	}
-}
+}*/
