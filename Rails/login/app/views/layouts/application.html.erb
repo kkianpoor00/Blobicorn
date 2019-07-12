@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styleMainTheme.css">
+    <title>Errand Folks</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+  <body>
+
+
+    <nav class="navigation-bar">
+      <a href="/index.html" class="bloblogo"><img class="logo" src="/images/blobicorn.png" alt="blob"></a>
+      <a href="/index.html" class="bloblogo">Home</a>
+      <a href="/contactUs.html" class="navig">Contact Us</a>
+      <a href="/signup.html">Sign Up</a>
+    </nav>
+
+    <header>
+      <% if signed_in? %>
+        Signed in as: <%= current_user.email %>
+        <%= button_to 'Sign out', sign_out_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Sign in', sign_in_path %>
+      <% end %>
+    </header>
+    <section>
+      <div id="flash">
+        <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+      </div>
+      <%= yield %>
+    <section>
+
+    <footer class="footerContext">
+
+      <p class="footer-comp-motto">Let's Act As a Society.</p>
+
+      <p class="footer-links">
+        <a href="./index.html">Home</a>
+        ·
+        <a href="./contactUs.html">Help</a>
+        ·
+        <a href="#">Career</a>
+        ·
+        <a href="./aboutUs.html">About</a>
+        ·
+        <a href="#">FAQ</a>
+        ·
+        <a href="./contactUs.html">Contact</a>
+      </p>
+
+      <p class="footer-comp-name">Blobicorn &copy; 2019</p>
+
+    </footer>
+
+
+  </body>
+</html>
