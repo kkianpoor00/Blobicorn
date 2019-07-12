@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./styleMainTheme.css">
+    <!-- <link rel="stylesheet" href="./styleMainTheme.scss"> -->
     <title>Errand Folks</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -16,7 +16,9 @@
 
 
     <nav class="navigation-bar">
-      <a href="/index.html" class="bloblogo"><img class="logo" src="/images/blobicorn.png" alt="blob"></a>
+      <!-- <a href="/index.html" class="bloblogo"><img class="logo" src="/images/blobicorn.png" alt="blob"></a> -->
+      <a href="/index.html" class="bloblogo">
+      <%= image_tag("blobicorn.png", width: "100px") %>
       <a href="/index.html" class="bloblogo">Home</a>
       <a href="/contactUs.html" class="navig">Contact Us</a>
       <a href="/signup.html">Sign Up</a>
