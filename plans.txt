@@ -1,3 +1,8 @@
-Database tables: James
-Login/Signup pages?: Kim
+Database tables and Ruby: James & Kiarash
+Style and presentation: Kim
+Login/Signup pages?: Kim, Carol
 Gantt chart: Carol
+HTML of Users Profiles: John 
+HTML and content of Posts: John
+Content of Our vision : Kiarash.
+revision of the written paragraphs: James. 
