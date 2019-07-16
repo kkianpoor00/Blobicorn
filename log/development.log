@@ -4976,811 +4976,221 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 951ms (Views: 835.8ms | ActiveRecord: 1.1ms)
 
 
-Started GET "/" for ::1 at 2019-07-16 10:53:57 -0700
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (77.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "gardening"], ["created_at", "2019-07-16 17:49:22.696792"], ["updated_at", "2019-07-16 17:49:22.696792"]]
+  [1m[35m (77.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2019-07-16 10:49:56 -0700
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
 Processing by StaticPagesController#home as HTML
   Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (3.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.4ms)
   Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (1.1ms)
-  Rendered layouts/_footer.html.erb (0.4ms)
-Completed 200 OK in 1409ms (Views: 1300.4ms | ActiveRecord: 0.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1016ms (Views: 986.3ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/index" for ::1 at 2019-07-16 10:54:01 -0700
+Started GET "/index" for ::1 at 2019-07-16 10:50:01 -0700
 Processing by PostsController#index as HTML
   Rendering posts/index.html.erb
-  [1m[36mPost Load (49.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (12.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
   ↳ app/views/posts/index.html.erb:18
-  Rendered posts/index.html.erb (53.8ms)
-Completed 200 OK in 94ms (Views: 26.5ms | ActiveRecord: 49.9ms)
+  Rendered posts/index.html.erb (16.8ms)
+Completed 200 OK in 57ms (Views: 26.2ms | ActiveRecord: 13.4ms)
 
 
-Started GET "/index" for ::1 at 2019-07-16 10:54:02 -0700
+Started GET "/index" for ::1 at 2019-07-16 10:50:01 -0700
 Processing by PostsController#index as HTML
   Rendering posts/index.html.erb
   [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
   ↳ app/views/posts/index.html.erb:18
-  Rendered posts/index.html.erb (4.7ms)
-Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+  Rendered posts/index.html.erb (4.3ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.3ms)
 
 
-Started GET "/posts/new" for ::1 at 2019-07-16 10:54:03 -0700
+Started GET "/posts/new" for ::1 at 2019-07-16 10:50:03 -0700
 Processing by PostsController#new as HTML
   Rendering posts/new.html.erb within layouts/application
   [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
   ↳ app/views/posts/_form.html.erb:16
   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
   ↳ app/views/posts/_form.html.erb:26
-  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
   ↳ app/views/posts/_form.html.erb:31
-  Rendered posts/_form.html.erb (129.8ms)
-  Rendered posts/new.html.erb within layouts/application (156.3ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.2ms)
-Completed 200 OK in 494ms (Views: 459.6ms | ActiveRecord: 3.8ms)
+  Rendered posts/_form.html.erb (115.9ms)
+  Rendered posts/new.html.erb within layouts/application (140.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 484ms (Views: 449.9ms | ActiveRecord: 4.0ms)
 
 
-Started GET "/" for ::1 at 2019-07-16 10:55:10 -0700
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
-  
-ActiveRecord::PendingMigrationError (
-
-Migrations are pending. To resolve this issue, run:
-
-        bin/rails db:migrate RAILS_ENV=development
-
-):
-  
-activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
-activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-Started GET "/" for ::1 at 2019-07-16 10:55:15 -0700
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
-  
-ActiveRecord::PendingMigrationError (
-
-Migrations are pending. To resolve this issue, run:
-
-        bin/rails db:migrate RAILS_ENV=development
-
-):
-  
-activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
-activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.3) lib/rails/engine.rb:524:in `call'
-puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (1.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "household"], ["created_at", "2019-07-16 17:51:44.482654"], ["updated_at", "2019-07-16 17:51:44.482654"]]
+  [1m[35m (102.5ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
-Migrating to CreateUsers (20190710023515)
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ bin/rails:4
-  [1m[35m (14.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  ↳ db/migrate/20190710023515_create_users.rb:3
-  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar NOT NULL, "encrypted_password" varchar(128) NOT NULL, "confirmation_token" varchar(128), "remember_token" varchar(128) NOT NULL)[0m
-  ↳ db/migrate/20190710023515_create_users.rb:3
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_email" ON "users" ("email")[0m
-  ↳ db/migrate/20190710023515_create_users.rb:11
-  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
-  ↳ db/migrate/20190710023515_create_users.rb:12
-  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190710023515"]]
-  ↳ bin/rails:4
-  [1m[35m (77.5ms)[0m  [1m[36mcommit transaction[0m
-  ↳ bin/rails:4
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   ↳ bin/rails:4
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   ↳ bin/rails:4
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   ↳ bin/rails:4
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
-Started GET "/" for ::1 at 2019-07-16 10:56:11 -0700
+Started GET "/" for ::1 at 2019-07-16 12:19:19 -0700
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
 Processing by StaticPagesController#home as HTML
   Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (4.7ms)
-  Rendered layouts/_shim.html.erb (0.3ms)
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.5ms)
-Completed 200 OK in 717ms (Views: 688.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/index" for ::1 at 2019-07-16 10:56:15 -0700
-Processing by PostsController#index as HTML
-  Rendering posts/index.html.erb
-  [1m[36mPost Load (48.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
-  ↳ app/views/posts/index.html.erb:18
-  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:20
-  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:22
-  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:23
-  Rendered posts/index.html.erb (176.2ms)
-Completed 200 OK in 218ms (Views: 147.7ms | ActiveRecord: 53.3ms)
-
-
-Started GET "/index" for ::1 at 2019-07-16 10:56:15 -0700
-Processing by PostsController#index as HTML
-  Rendering posts/index.html.erb
-  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
-  ↳ app/views/posts/index.html.erb:18
-  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:20
-  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:22
-  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:23
-  Rendered posts/index.html.erb (15.2ms)
-Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 1.3ms)
-
-
-Started GET "/posts/new" for ::1 at 2019-07-16 10:56:32 -0700
-Processing by PostsController#new as HTML
-  Rendering posts/new.html.erb within layouts/application
-  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
-  ↳ app/views/posts/_form.html.erb:16
-  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
-  ↳ app/views/posts/_form.html.erb:26
-  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
-  ↳ app/views/posts/_form.html.erb:31
-  Rendered posts/_form.html.erb (53.4ms)
-  Rendered posts/new.html.erb within layouts/application (80.9ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.2ms)
-Completed 200 OK in 422ms (Views: 395.4ms | ActiveRecord: 0.8ms)
-
-
-Started POST "/posts" for ::1 at 2019-07-16 10:56:42 -0700
-Processing by PostsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "post"=>{"service_id"=>"1", "title"=>"dfdf", "category_id"=>"1", "location_id"=>"1", "body"=>""}, "commit"=>"Create Post"}
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ app/controllers/posts_controller.rb:32
-  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/posts_controller.rb:32
-  [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/posts_controller.rb:32
-  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/controllers/posts_controller.rb:32
-  [1m[36mPost Create (9.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "category_id", "service_id", "location_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "dfdf"], ["body", ""], ["created_at", "2019-07-16 17:56:42.658126"], ["updated_at", "2019-07-16 17:56:42.658126"], ["category_id", 1], ["service_id", 1], ["location_id", 1]]
-  ↳ app/controllers/posts_controller.rb:32
-  [1m[35m (83.6ms)[0m  [1m[36mcommit transaction[0m
-  ↳ app/controllers/posts_controller.rb:32
-Redirected to http://localhost:3000/posts/3
-Completed 302 Found in 118ms (ActiveRecord: 93.9ms)
-
-
-Started GET "/posts/3" for ::1 at 2019-07-16 10:56:42 -0700
-Processing by PostsController#show as HTML
-  Parameters: {"id"=>"3"}
-  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/controllers/posts_controller.rb:69
-  Rendering posts/show.html.erb within layouts/application
-  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/show.html.erb:5
-  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/show.html.erb:15
-  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/show.html.erb:20
-  Rendered posts/show.html.erb within layouts/application (15.6ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.6ms)
-  Rendered layouts/_footer.html.erb (0.2ms)
-Completed 200 OK in 345ms (Views: 310.4ms | ActiveRecord: 1.6ms)
-
-
-Started GET "/posts" for ::1 at 2019-07-16 10:56:47 -0700
-Processing by PostsController#index as HTML
-  Rendering posts/index.html.erb
-  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
-  ↳ app/views/posts/index.html.erb:18
-  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:20
-  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:22
-  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:23
-  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:20
-  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:22
-  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:23
-  Rendered posts/index.html.erb (30.9ms)
-Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 1.4ms)
-
-
-Started GET "/posts" for ::1 at 2019-07-16 10:56:47 -0700
-Processing by PostsController#index as HTML
-  Rendering posts/index.html.erb
-  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
-  ↳ app/views/posts/index.html.erb:18
-  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:20
-  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:22
-  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:23
-  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:20
-  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:22
-  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:23
-  Rendered posts/index.html.erb (35.9ms)
-Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 1.9ms)
-
-
-Started GET "/posts/new" for ::1 at 2019-07-16 10:57:40 -0700
-Processing by PostsController#new as HTML
-  Rendering posts/new.html.erb within layouts/application
-  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
-  ↳ app/views/posts/_form.html.erb:16
-  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
-  ↳ app/views/posts/_form.html.erb:26
-  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
-  ↳ app/views/posts/_form.html.erb:31
-  Rendered posts/_form.html.erb (11.8ms)
-  Rendered posts/new.html.erb within layouts/application (38.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.9ms)
   Rendered layouts/_shim.html.erb (0.2ms)
   Rendered layouts/_header.html.erb (0.7ms)
   Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 377ms (Views: 348.2ms | ActiveRecord: 0.7ms)
+Completed 200 OK in 757ms (Views: 728.1ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/posts/new" for ::1 at 2019-07-16 10:59:11 -0700
-Processing by PostsController#new as HTML
-  Rendering posts/new.html.erb within layouts/application
-  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
-  ↳ app/views/posts/_form.html.erb:16
-  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
-  ↳ app/views/posts/_form.html.erb:26
-  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
-  ↳ app/views/posts/_form.html.erb:31
-  Rendered posts/_form.html.erb (11.2ms)
-  Rendered posts/new.html.erb within layouts/application (36.7ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.6ms)
-  Rendered layouts/_footer.html.erb (0.2ms)
-Completed 200 OK in 383ms (Views: 355.0ms | ActiveRecord: 0.7ms)
-
-
-Started GET "/index" for ::1 at 2019-07-16 10:59:56 -0700
-Processing by PostsController#index as HTML
-  Rendering posts/index.html.erb
-  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
-  ↳ app/views/posts/index.html.erb:18
-  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:20
-  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:22
-  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:23
-  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:20
-  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:22
-  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:23
-  Rendered posts/index.html.erb (26.4ms)
-Completed 200 OK in 52ms (Views: 50.1ms | ActiveRecord: 1.4ms)
-
-
-Started GET "/index" for ::1 at 2019-07-16 10:59:56 -0700
-Processing by PostsController#index as HTML
-  Rendering posts/index.html.erb
-  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
-  ↳ app/views/posts/index.html.erb:18
-  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:20
-  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:22
-  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:23
-  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:20
-  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:22
-  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:23
-  Rendered posts/index.html.erb (27.3ms)
-Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 1.2ms)
-
-
-Started GET "/posts/new" for ::1 at 2019-07-16 10:59:59 -0700
-Processing by PostsController#new as HTML
-  Rendering posts/new.html.erb within layouts/application
-  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
-  ↳ app/views/posts/_form.html.erb:16
-  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
-  ↳ app/views/posts/_form.html.erb:26
-  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
-  ↳ app/views/posts/_form.html.erb:31
-  Rendered posts/_form.html.erb (11.0ms)
-  Rendered posts/new.html.erb within layouts/application (40.2ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (1.2ms)
-  Rendered layouts/_footer.html.erb (0.5ms)
-Completed 200 OK in 401ms (Views: 373.9ms | ActiveRecord: 0.7ms)
-
-
-Started GET "/" for 127.0.0.1 at 2019-07-16 11:02:49 -0700
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
-Processing by StaticPagesController#home as HTML
-  Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (3.3ms)
-  Rendered layouts/_shim.html.erb (0.3ms)
-  Rendered layouts/_header.html.erb (1.3ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 751ms (Views: 722.8ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/index" for 127.0.0.1 at 2019-07-16 11:02:54 -0700
-Processing by PostsController#index as HTML
-  Rendering posts/index.html.erb within layouts/application
-  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
-  ↳ app/views/posts/index.html.erb:18
-  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:20
-  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:22
-  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:23
-  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:20
-  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:22
-  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/posts/index.html.erb:23
-  Rendered posts/index.html.erb within layouts/application (108.9ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.2ms)
-Completed 200 OK in 478ms (Views: 425.4ms | ActiveRecord: 5.0ms)
-
-
-Started GET "/sign_in" for ::1 at 2019-07-16 11:04:03 -0700
+Started GET "/sign_in" for ::1 at 2019-07-16 12:19:26 -0700
 Processing by Clearance::SessionsController#new as HTML
   Rendering C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/clearance-1.17.0/app/views/sessions/new.html.erb within layouts/application
-  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/clearance-1.17.0/app/views/sessions/_form.html.erb (18.0ms)
-  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/clearance-1.17.0/app/views/sessions/new.html.erb within layouts/application (74.8ms)
-  Rendered layouts/_shim.html.erb (0.3ms)
-  Rendered layouts/_header.html.erb (1.5ms)
-  Rendered layouts/_footer.html.erb (0.2ms)
-Completed 200 OK in 509ms (Views: 508.1ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:08 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/clearance-1.17.0/app/views/sessions/_form.html.erb (20.5ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/clearance-1.17.0/app/views/sessions/new.html.erb within layouts/application (81.1ms)
   Rendered layouts/_shim.html.erb (0.2ms)
   Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 366ms (Views: 287.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:11 -0700
-Processing by WelcomeController#home as HTML
-Started GET "/home" for ::1 at 2019-07-16 11:04:11 -0700
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.5ms)
-Processing by WelcomeController#home as HTML
-Started GET "/home" for ::1 at 2019-07-16 11:04:12 -0700
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.4ms)
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.6ms)
-Started GET "/home" for ::1 at 2019-07-16 11:04:12 -0700
-Started GET "/home" for ::1 at 2019-07-16 11:04:12 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.4ms)
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_shim.html.erb (0.4ms)
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.1ms)
-  Rendered layouts/_footer.html.erb (0.4ms)
-Completed 200 OK in 1195ms (Views: 1168.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:13 -0700
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_shim.html.erb (0.5ms)
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.5ms)
-  Rendered layouts/_header.html.erb (1.2ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1391ms (Views: 1366.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:13 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.6ms)
-  Rendered layouts/_shim.html.erb (0.4ms)
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.4ms)
-Completed 200 OK in 1707ms (Views: 1681.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:13 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.4ms)
-  Rendered layouts/_shim.html.erb (0.5ms)
-  Rendered layouts/_header.html.erb (0.6ms)
-  Rendered layouts/_footer.html.erb (0.7ms)
-Completed 200 OK in 1833ms (Views: 1805.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:14 -0700
-  Rendered layouts/_shim.html.erb (0.0ms)
-  Rendered layouts/_header.html.erb (0.3ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 1805ms (Views: 1749.8ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:14 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.4ms)
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_shim.html.erb (0.6ms)
-  Rendered layouts/_header.html.erb (0.7ms)
   Rendered layouts/_footer.html.erb (0.2ms)
-Completed 200 OK in 1926ms (Views: 1893.4ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 475ms (Views: 474.1ms | ActiveRecord: 0.0ms)
 
 
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.1ms)
-Started GET "/home" for ::1 at 2019-07-16 11:04:15 -0700
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_shim.html.erb (0.4ms)
-  Rendered layouts/_header.html.erb (1.3ms)
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.9ms)
+Started GET "/sign_up" for ::1 at 2019-07-16 12:19:28 -0700
+Processing by Clearance::UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
   Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1905ms (Views: 1846.3ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 382ms (Views: 344.6ms | ActiveRecord: 0.8ms)
 
 
-Started GET "/home" for ::1 at 2019-07-16 11:04:15 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (4.3ms)
+Started GET "/sign_up" for ::1 at 2019-07-16 12:21:28 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Clearance::UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (22.6ms)
+  Rendered users/new.html.erb within layouts/application (70.7ms)
   Rendered layouts/_shim.html.erb (0.2ms)
   Rendered layouts/_header.html.erb (0.9ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1805ms (Views: 1772.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:15 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.6ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.6ms)
-  Rendered layouts/_footer.html.erb (0.6ms)
-Completed 200 OK in 1723ms (Views: 1679.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:16 -0700
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 1670ms (Views: 1616.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:16 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.8ms)
-  Rendered layouts/_shim.html.erb (0.5ms)
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1903ms (Views: 1837.6ms | ActiveRecord: 0.0ms)
-
-
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.1ms)
-Started GET "/home" for ::1 at 2019-07-16 11:04:17 -0700
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_shim.html.erb (0.3ms)
-  Rendered layouts/_header.html.erb (0.7ms)
   Rendered layouts/_footer.html.erb (0.5ms)
-Completed 200 OK in 2008ms (Views: 1973.6ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 822ms (Views: 775.8ms | ActiveRecord: 1.0ms)
 
 
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.6ms)
-Started GET "/home" for ::1 at 2019-07-16 11:04:17 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+Started GET "/sign_up" for ::1 at 2019-07-16 12:23:06 -0700
+Processing by Clearance::UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (27.7ms)
   Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.8ms)
-  Rendered layouts/_footer.html.erb (0.4ms)
-Completed 200 OK in 1987ms (Views: 1948.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:18 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.6ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1826ms (Views: 1793.8ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:18 -0700
-  Rendered layouts/_shim.html.erb (0.0ms)
-  Rendered layouts/_header.html.erb (0.3ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 1670ms (Views: 1618.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:18 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.7ms)
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_shim.html.erb (0.4ms)
-  Rendered layouts/_header.html.erb (1.1ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1848ms (Views: 1813.6ms | ActiveRecord: 0.0ms)
-
-
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.1ms)
-Started GET "/home" for ::1 at 2019-07-16 11:04:19 -0700
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_shim.html.erb (0.3ms)
-  Rendered layouts/_header.html.erb (30.2ms)
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered layouts/_footer.html.erb (0.4ms)
-Completed 200 OK in 1861ms (Views: 1826.4ms | ActiveRecord: 0.0ms)
-
-
-  Rendered welcome/home.html.erb within layouts/application (1.1ms)
-Started GET "/home" for ::1 at 2019-07-16 11:04:19 -0700
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_shim.html.erb (0.3ms)
-  Rendered layouts/_header.html.erb (0.9ms)
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.4ms)
-  Rendered layouts/_footer.html.erb (0.5ms)
-Completed 200 OK in 1827ms (Views: 1789.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:20 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.8ms)
-  Rendered layouts/_shim.html.erb (0.3ms)
-  Rendered layouts/_header.html.erb (0.8ms)
-  Rendered layouts/_footer.html.erb (3.4ms)
-Completed 200 OK in 1787ms (Views: 1752.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:20 -0700
-  Rendered layouts/_shim.html.erb (0.0ms)
-  Rendered layouts/_header.html.erb (0.3ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 1698ms (Views: 1640.9ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:20 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.7ms)
-  Rendered layouts/_shim.html.erb (0.3ms)
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_header.html.erb (0.9ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1805ms (Views: 1746.6ms | ActiveRecord: 0.0ms)
-
-
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.1ms)
-Started GET "/home" for ::1 at 2019-07-16 11:04:21 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.6ms)
-  Rendered layouts/_shim.html.erb (0.6ms)
-  Rendered layouts/_header.html.erb (0.8ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1982ms (Views: 1917.8ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:21 -0700
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.6ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1930ms (Views: 1894.9ms | ActiveRecord: 0.0ms)
-
-
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.4ms)
-Started GET "/home" for ::1 at 2019-07-16 11:04:22 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.4ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.8ms)
-  Rendered layouts/_footer.html.erb (0.2ms)
-Completed 200 OK in 1802ms (Views: 1767.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:22 -0700
-  Rendered layouts/_shim.html.erb (0.1ms)
-  Rendered layouts/_header.html.erb (0.3ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 1636ms (Views: 1570.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:22 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.5ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1738ms (Views: 1706.3ms | ActiveRecord: 0.0ms)
-
-
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.1ms)
-Started GET "/home" for ::1 at 2019-07-16 11:04:23 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.5ms)
-  Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.8ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1754ms (Views: 1698.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:23 -0700
-Processing by WelcomeController#home as HTML
-  Rendered layouts/_shim.html.erb (0.3ms)
-  Rendered layouts/_header.html.erb (0.9ms)
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.8ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1922ms (Views: 1892.6ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:24 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.6ms)
-  Rendered layouts/_shim.html.erb (0.4ms)
-  Rendered layouts/_header.html.erb (1.1ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1961ms (Views: 1918.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for ::1 at 2019-07-16 11:04:24 -0700
-  Rendered layouts/_shim.html.erb (0.0ms)
   Rendered layouts/_header.html.erb (0.5ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 1861ms (Views: 1801.9ms | ActiveRecord: 0.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 415ms (Views: 413.3ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/home" for ::1 at 2019-07-16 11:04:24 -0700
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.4ms)
-  Rendered layouts/_shim.html.erb (0.4ms)
-  Rendered layouts/_header.html.erb (0.8ms)
-  Rendered layouts/_footer.html.erb (0.5ms)
-Completed 200 OK in 1942ms (Views: 1910.4ms | ActiveRecord: 0.0ms)
+Started GET "/sign_up" for ::1 at 2019-07-16 12:23:56 -0700
+Processing by Clearance::UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (33.2ms)
+  Rendered users/new.html.erb within layouts/application (60.3ms)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 0.0ms)
 
 
-Processing by WelcomeController#home as HTML
-  Rendering welcome/home.html.erb within layouts/application
-  Rendered welcome/home.html.erb within layouts/application (0.1ms)
-  Rendered layouts/_shim.html.erb (0.3ms)
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1802ms (Views: 1735.8ms | ActiveRecord: 0.0ms)
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x000000000c79d7e8>):
+    10: 
+    11: <div class="text-field">
+    12:   <%= form.label :name %>
+    13:   <%= form.text_field :name, type: 'name' %>
+    14: </div>
+  
+app/views/users/_form.html.erb:13:in `_app_views_users__form_html_erb__407879361_104573720'
+app/views/users/new.html.erb:5:in `block in _app_views_users_new_html_erb__444809897_104652020'
+app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb__444809897_104652020'
+Started GET "/sign_up" for ::1 at 2019-07-16 12:24:31 -0700
+Processing by Clearance::UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (28.8ms)
+  Rendered users/new.html.erb within layouts/application (56.4ms)
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 0.0ms)
 
 
-  Rendered layouts/_shim.html.erb (0.4ms)
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 1619ms (Views: 1581.4ms | ActiveRecord: 0.0ms)
-
-
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x000000000d19b5d8>):
+    10: 
+    11: <div class="text-field">
+    12:   <%= form.label :name %>
+    13:   <%= form.text_field(:name, type: 'name') %>
+    14: </div>
+  
+app/views/users/_form.html.erb:13:in `_app_views_users__form_html_erb__407879361_109844360'
+app/views/users/new.html.erb:5:in `block in _app_views_users_new_html_erb__444809897_109890480'
+app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb__444809897_109890480'
+Started GET "/sign_up" for ::1 at 2019-07-16 12:25:10 -0700
+Processing by Clearance::UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.1ms)
+  Rendered users/new.html.erb within layouts/application (30.7ms)
   Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.7ms)
-  Rendered layouts/_footer.html.erb (0.4ms)
-Completed 200 OK in 1129ms (Views: 1094.8ms | ActiveRecord: 0.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 434ms (Views: 432.9ms | ActiveRecord: 0.0ms)
 
 
-  Rendered layouts/_shim.html.erb (0.0ms)
-  Rendered layouts/_header.html.erb (0.5ms)
-  Rendered layouts/_footer.html.erb (0.0ms)
-Completed 200 OK in 906ms (Views: 864.8ms | ActiveRecord: 0.0ms)
+Started GET "/index" for ::1 at 2019-07-16 12:25:15 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:22
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:22
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  Rendered posts/index.html.erb (89.8ms)
+Completed 200 OK in 130ms (Views: 109.1ms | ActiveRecord: 4.4ms)
 
 
-Started GET "/index" for ::1 at 2019-07-16 11:11:53 -0700
+Started GET "/index" for ::1 at 2019-07-16 12:25:15 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:22
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:22
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  Rendered posts/index.html.erb (13.8ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/index" for ::1 at 2019-07-16 12:26:04 -0700
 Processing by PostsController#index as HTML
   Rendering posts/index.html.erb within layouts/application
-  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
   ↳ app/views/posts/index.html.erb:18
   [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/posts/index.html.erb:20
@@ -5788,33 +5198,308 @@ Processing by PostsController#index as HTML
   ↳ app/views/posts/index.html.erb:22
   [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/posts/index.html.erb:23
-  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/posts/index.html.erb:20
   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/posts/index.html.erb:22
   [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/posts/index.html.erb:23
-  Rendered posts/index.html.erb within layouts/application (69.4ms)
+  Rendered posts/index.html.erb within layouts/application (53.4ms)
   Rendered layouts/_shim.html.erb (0.2ms)
-  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (0.4ms)
   Rendered layouts/_footer.html.erb (0.3ms)
-Completed 200 OK in 424ms (Views: 386.9ms | ActiveRecord: 5.0ms)
+Completed 200 OK in 411ms (Views: 377.2ms | ActiveRecord: 5.5ms)
 
 
-Started GET "/posts/new" for ::1 at 2019-07-16 11:11:54 -0700
-Processing by PostsController#new as HTML
-  Rendering posts/new.html.erb within layouts/application
-  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
-  ↳ app/views/posts/_form.html.erb:16
-  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
-  ↳ app/views/posts/_form.html.erb:26
-  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
-  ↳ app/views/posts/_form.html.erb:31
-  Rendered posts/_form.html.erb (20.4ms)
-  Rendered posts/new.html.erb within layouts/application (52.0ms)
+Started GET "/home" for ::1 at 2019-07-16 12:26:07 -0700
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 374ms (Views: 287.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to AddUsernameToUsers (20190716192723)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (52.2ms)[0m  [1m[35mALTER TABLE "users" ADD "username" varchar[0m
+  ↳ db/migrate/20190716192723_add_username_to_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190716192723_add_username_to_users.rb:4
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_users_on_username" ON "users" ("username")[0m
+  ↳ db/migrate/20190716192723_add_username_to_users.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190716192723"]]
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (61.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Started GET "/sign_up" for ::1 at 2019-07-16 12:28:51 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Clearance::UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (23.5ms)
+  Rendered users/new.html.erb within layouts/application (74.4ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 863ms (Views: 816.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2019-07-16 12:29:14 -0700
+Processing by Clearance::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "username"=>"test"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+activemodel (5.2.3) lib/active_model/forbidden_attributes_protection.rb:23:in `sanitize_for_mass_assignment'
+activemodel (5.2.3) lib/active_model/attribute_assignment.rb:35:in `assign_attributes'
+activerecord (5.2.3) lib/active_record/core.rb:315:in `initialize'
+activerecord (5.2.3) lib/active_record/inheritance.rb:66:in `new'
+activerecord (5.2.3) lib/active_record/inheritance.rb:66:in `new'
+clearance (1.17.0) app/controllers/clearance/users_controller.rb:52:in `user_from_params'
+clearance (1.17.0) app/controllers/clearance/users_controller.rb:18:in `create'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+clearance (1.17.0) lib/clearance/rack_session.rb:23:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-07-16 12:33:06 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 811ms (Views: 783.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-16 12:33:10 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 409ms (Views: 385.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-16 12:33:40 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
   Rendered layouts/_shim.html.erb (0.3ms)
-  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
   Rendered layouts/_footer.html.erb (0.2ms)
-Completed 200 OK in 446ms (Views: 414.3ms | ActiveRecord: 0.8ms)
+Completed 200 OK in 344ms (Views: 320.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-07-16 12:33:42 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 321ms (Views: 290.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for ::1 at 2019-07-16 12:33:45 -0700
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (19.8ms)
+  Rendered sessions/new.html.erb within layouts/application (56.4ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 377ms (Views: 376.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for ::1 at 2019-07-16 12:33:47 -0700
+Processing by Clearance::UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/new.html.erb within layouts/application (24.2ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 406ms (Views: 364.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2019-07-16 12:33:57 -0700
+  
+ActionController::RoutingError (uninitialized constant CLearance):
+  
+app/controllers/users_controller.rb:6:in `<top (required)>'
+Started GET "/" for ::1 at 2019-07-16 12:35:04 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 374ms (Views: 351.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for ::1 at 2019-07-16 12:35:06 -0700
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.1ms)
+  Rendered sessions/new.html.erb within layouts/application (23.9ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 348ms (Views: 348.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for ::1 at 2019-07-16 12:35:09 -0700
+Processing by Clearance::UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (33.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 386ms (Views: 379.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for ::1 at 2019-07-16 12:35:14 -0700
+  
+ActionController::RoutingError (uninitialized constant CLearance):
+  
+app/controllers/users_controller.rb:6:in `<top (required)>'
+Started GET "/" for ::1 at 2019-07-16 12:36:22 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 343ms (Views: 320.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for ::1 at 2019-07-16 12:36:24 -0700
+Processing by Clearance::SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.1ms)
+  Rendered sessions/new.html.erb within layouts/application (23.5ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 350ms (Views: 349.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for ::1 at 2019-07-16 12:36:27 -0700
+Processing by Clearance::UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/new.html.erb within layouts/application (25.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 370ms (Views: 364.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for ::1 at 2019-07-16 12:36:32 -0700
+Processing by Clearance::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "remember_token") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-16 19:36:32.477133"], ["updated_at", "2019-07-16 19:36:32.477133"], ["email", "test@test.com"], ["encrypted_password", "$2a$12$etBeMa41B.e2VK4gUJVyYeEm2D21XS2QSz.yzpjUdQfD1xifBVFqa"], ["remember_token", "de0350510ac1feee4078a411db0bebd847488955"]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (68.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 335ms (ActiveRecord: 71.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-16 12:36:32 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 334ms (Views: 307.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["remember_token", "de0350510ac1feee4078a411db0bebd847488955"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
