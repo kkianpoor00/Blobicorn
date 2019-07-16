@@ -32,7 +32,8 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get  'static_pages/home'
   get  'static_pages/help'
-  get  'static_pages/about'
+  get  'static_pages/aboutUs'
+  get  'static_pages/contactUs'
   get 'home', to: 'welcome#home', as: 'home'
 
 
