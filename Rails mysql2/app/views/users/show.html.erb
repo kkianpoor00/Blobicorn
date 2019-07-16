@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <%= stylesheet_link_tag('admin') %>
+    <title>Errand Folks</title>
+  </head>
+
+
+  <body>
+
+    <div>
+
+      <nav class="navigation-bar">
+        <a href="/" class="bloblogo">
+          <%= image_tag("logo/blobicorn.png", :alt => 'blob', class: "logo") %>
+        </a>
+        <a href="#" class="navig">Offer a Service</a>
+        <a href="#" class="navig">Categories</a>
+        <a href="#" class="navig">Contact Us</a>
+
+      </nav>
+
+      <h2>Firstname: <%= @user.first_name %></h2>
+      <h2>Lastname: <%= @user.last_name %></h2>
+
+      <p>
+        Email: <%= @user.email %>
+      </p>
+
+      <%= link_to("Edit", edit_user_path(@user), :class => 'action edit') %>
+      <%= link_to("Delete", delete_user_path(@user), :class => 'action delete') %>
+
+  </body>
+</html>

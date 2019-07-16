@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <%= stylesheet_link_tag('admin') %>
+    <title>Errand Folks</title>
+  </head>
+
+
+  <body>
+
+    <div>
+
+      <nav class="navigation-bar">
+        <a href="/" class="bloblogo">
+          <%= image_tag("logo/blobicorn.png", :alt => 'blob', class: "logo") %>
+        </a>
+        <%= link_to("Offer a Service", new_post_path, class: "navig") %>
+        <a href="#" class="navig">Categories</a>
+        <a href="#" class="navig">Contact Us</a>
+        <%= link_to("Log out", login_logout_path, class: "navig") %>
+        <%= link_to("Hello " + @user.first_name + " " + @user.last_name,
+            user_path(@user), class: "navig") %>
+
+      </nav>
+
+    </div>
+
+
+    <div class="posting">
+      <h2 class="posts-title"> Postings </h2>
+
+      <div class="posts">
+
+        <ul>
+          <li>
+            <a href="#">
+              <h2>Title #1</h2>
+              <p>Text Content #1</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>Title #2</h2>
+              <p>Text Content #2</p>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+
+    <footer class="footerContext">
+
+      <p class="footer-comp-motto">Let's Act As a Society.</p>
+
+      <p class="footer-links">
+        <a href="./index.html">Home</a>
+        ·
+        <a href="#">Help</a>
+        ·
+        <a href="#">Career</a>
+        ·
+        <a href="#">About</a>
+        ·
+        <a href="#">FAQ</a>
+        ·
+        <a href="#">Contact</a>
+      </p>
+
+      <p class="footer-comp-name">Blobicorn &copy; 2019</p>
+
+    </footer>
+
+
+  </body>
+</html>
