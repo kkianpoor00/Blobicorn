@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :confirm_logged_in
+  before_action :confirm_logged_in, :except => [:new, :create]
 
   def index
     @users = EfUser.sorted
@@ -25,9 +25,12 @@ class UsersController < ApplicationController
     # end
 
     #to just get to login page
+    puts 'it comes here'
     if @user.save
-      redirect_to(user_path(@user))
+      puts 'it comes here too'
+      redirect_to(users_path(@user))
     else
+      puts 'aaaaaaaaaaoooooooo'
       render('new')
     end
   end
