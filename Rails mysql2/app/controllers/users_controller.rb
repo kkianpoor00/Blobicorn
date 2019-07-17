@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   def index
     @users = EfUser.sorted
     @user = EfUser.find_by_id(session[:user_id])
+    @posts = Post.sorted
   end
 
   def show

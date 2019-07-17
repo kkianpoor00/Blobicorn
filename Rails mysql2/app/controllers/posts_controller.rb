@@ -3,9 +3,11 @@ class PostsController < ApplicationController
   before_action :confirm_logged_in
 
   def index
+    @posts = Post.sorted
   end
 
   def show
+    @chosen_post = Post.find_by_id(params[:id])
   end
 
   def new
