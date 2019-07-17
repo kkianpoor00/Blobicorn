@@ -25,18 +25,15 @@ class UsersController < ApplicationController
     # end
 
     #to just get to login page
-    puts 'it comes here'
     if @user.save
-      puts 'it comes here too'
-      redirect_to(users_path(@user))
+      redirect_to(login_login_user_path)
     else
-      puts 'aaaaaaaaaaoooooooo'
       render('new')
     end
   end
 
   def edit
-    @user = EfUser.find(params[:id])
+    @user = EfUser.find(session[:id])
 
     #the user cannot change the information of other accounts
     if(session[:user_id] != @user.id)
@@ -69,6 +66,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:ef_user).permit(:first_name, :last_name, :email, :password)
+    params.require(:ef_user).permit(:post_id, :first_name, :last_name, :email, :password)
   end
 end

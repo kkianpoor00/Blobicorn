@@ -24,14 +24,14 @@ ActiveRecord::Schema.define(version: 2019_07_14_162415) do
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "ef_user_id"
     t.string "title"
     t.string "category"
-    t.string "type", limit: 50
+    t.string "kindOfPost", limit: 50
     t.text "details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_posts_on_user_id"
+    t.index ["ef_user_id"], name: "index_posts_on_ef_user_id"
   end
 
 end

@@ -13,11 +13,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_info_params)
-    @post.user_id = session[:user_id]
-    puts @post.user_id
+    @user = EfUser.find_by_id(session[:user_id])
+    puts @user.id
+    @post = @user.posts.new(post_info_params)
     if @post.save
-      redirect_to(post_path(@post))
+      redirect_to(users_path)
     else
       render('new')
     end
@@ -39,11 +39,7 @@ class PostsController < ApplicationController
   private
 
   def post_info_params
-    params.require(:post).permit(:title => params[:title],
-      :category => params[:category],
-      :kindOfPost => params[:kindOfPost] ,
-      :details => params[:details])
-
+    params.require(:post).permit( :user_id, :title, :category, :kindOfPost, :details)
   end
 
 end
