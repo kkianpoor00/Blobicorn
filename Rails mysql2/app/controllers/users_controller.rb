@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = EfUser.find(session[:id])
+    @user = EfUser.find(params[:id])
 
     #the user cannot change the information of other accounts
     if(session[:user_id] != @user.id)
