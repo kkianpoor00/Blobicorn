@@ -72,10 +72,10 @@
         <ul>
           <% @posts.each do |p| %>
           <li>
-            <a href="#">
+            <%= link_to(post_path(p)) do %>
               <h2><%= p.title %></h2>
               <p><%= p.details %></p>
-            </a>
+            <% end %>
           </li>
           <% end %>
         </ul>

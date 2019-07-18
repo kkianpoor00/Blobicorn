@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :confirm_logged_in
+  before_action :confirm_logged_in, :except => [:show]
 
   def index
     @posts = Post.sorted

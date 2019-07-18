@@ -1,5 +1,6 @@
 class FirstPageController < ApplicationController
 
+  before_action :confirm_logged_in, :except => [:index, :searchedIndex]
 
   def index
     @wantedPost = Post.new
