@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_07_16_192723) do
     t.integer "category_id"
     t.integer "service_id"
     t.integer "location_id"
+    t.string "email", limit: 50
     t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["location_id"], name: "index_posts_on_location_id"
     t.index ["service_id"], name: "index_posts_on_service_id"

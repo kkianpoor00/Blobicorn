@@ -23,8 +23,12 @@
         <td><%= post.location.name %></td>
         <td><%= post.body %></td>
         <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if signed_in? %>
+          <% if (current_user.email == post.email) %>
+            <td><%= link_to 'Edit', edit_post_path(post) %></td>
+            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +36,8 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<% if signed_in? %>
+  <%= link_to 'New Post', new_post_path %>
+<% else %>
+  <%= link_to 'New Post', '/sign_in' %>
+<% end %>
