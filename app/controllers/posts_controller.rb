@@ -4,7 +4,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    if(params[:term])
+      @posts = Post.where('title LIKE ?', "%#{params[:term]}%")
+    else
+      @posts = Post.all
+    end
   end
 
   # GET /posts/1

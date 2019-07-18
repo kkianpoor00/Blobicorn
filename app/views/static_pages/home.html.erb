@@ -33,11 +33,13 @@
       <option value="">Carpool</option>
     </select> -->
 
-    <input class="searchBox" type="search" name="" placeholder=" Search For a Service">
+    <form action="posts/index" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <input class="searchBox" type="search" name="term" id="term" placeholder=" Search For a Service" />
+      <div class="searchButton-center">
+        <button id="search" class="homePSearch" type="search" name="searchB" >Search</button>
+      </div>
+    </form>
 
-    <div class="searchButton-center">
-      <button id="search" class="homePSearch" type="search" name="searchB">Search</button>
-    </div>
   </div>
 
 </div>
