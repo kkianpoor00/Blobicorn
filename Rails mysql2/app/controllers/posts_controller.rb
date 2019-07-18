@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 
   def edit
     @chosen_post = Post.find_by_id(params[:id])
-    @user = EfUser.find(params[:id])
+    @user = EfUser.find(@chosen_post.ef_user_id)
 
     #the user cannot change the information of other accounts's posts
     if(session[:user_id] != @user.id)
@@ -48,7 +48,7 @@ class PostsController < ApplicationController
 
   def delete
     @chosen_post = Post.find_by_id(params[:id])
-    @user = EfUser.find(params[:id])
+    @user = EfUser.find(@chosen_post.ef_user_id)
 
     #the user cannot delete the information of other accounts's posts
     if(session[:user_id] != @user.id)
