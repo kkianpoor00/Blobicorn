@@ -16,17 +16,19 @@
       </a>
       <a href="/" class="bloblogo">Home</a>
       <a href="./contactUs.html" class="navig">Contact Us</a>
-      <%= link_to("Log out", login_logout_path, class: "navig") %>
+      <a href="../login/login_user">Log In</a>
     </nav>
 
 
     <%= form_for(@post, :url => posts_path, :method => 'post') do |f| %>
 
+      <% @post.user_id = session[:user_id] %>
+      <%= @post.user_id %>
 
-      <label for="">Title: </label>
+      <%= label_tag(:title, "Title: ")%>
       <%= f.text_field(:title) %>
 
-      <label for="">Category: </label>
+      <%= label_tag(:category, "Category: ")%>
       <%= f.text_field(:category) %>
 
       <%= label_tag(:kindOfPost, "Type: ")%>
