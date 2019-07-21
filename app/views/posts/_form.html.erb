@@ -14,6 +14,8 @@
   <div class="field">
     <%= form.label :service %>
     <%= form.collection_select :service_id, Service.all, :id, :option %>
+<!--     <%= form.radio_button :service_id, Service.first %> Offered
+    <%= form.radio_button :service_id, Service.second %> Requested -->
   </div>
 
   <div class="field">
@@ -29,6 +31,11 @@
   <div class="field">
     <%= form.label :location %>
     <%= form.collection_select :location_id, Location.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postalcode, 'Postal Code' %>
+    <%= form.text_field :postalcode %>
   </div>
 
   <div class="field">

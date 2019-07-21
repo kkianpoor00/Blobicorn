@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_16_192723) do
+ActiveRecord::Schema.define(version: 2019_07_21_012247) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,12 @@ ActiveRecord::Schema.define(version: 2019_07_16_192723) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "postal_codes", force: :cascade do |t|
+    t.string "PostCode"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -41,8 +47,10 @@ ActiveRecord::Schema.define(version: 2019_07_16_192723) do
     t.integer "service_id"
     t.integer "location_id"
     t.string "email", limit: 50
+    t.string "PostCode"
     t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["location_id"], name: "index_posts_on_location_id"
+    t.index ["postalcode_id"], name: "index_posts_on_postalcode_id"
     t.index ["service_id"], name: "index_posts_on_service_id"
   end
 
