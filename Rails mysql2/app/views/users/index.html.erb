@@ -33,20 +33,16 @@
       <div class="posts">
 
         <ul>
+          <% @posts.each do |p| %>
           <li>
-            <a href="#">
-              <h2>Title #1</h2>
-              <p>Text Content #1</p>
-            </a>
+            <%= link_to(post_path(p)) do %>
+              <h2><%= p.title %></h2>
+              <p><%= p.details %></p>
+            <% end %>
           </li>
-          <li>
-            <a href="#">
-              <h2>Title #2</h2>
-              <p>Text Content #2</p>
-            </a>
-          </li>
-          
+          <% end %>
         </ul>
+
       </div>
     </div>
 

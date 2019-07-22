@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   post 'login/attempt_login'
   get 'login/logout'
 
+  get 'first_page/searchedIndex'
+
   get 'first_page/index'
   get 'first_page/contactUs'
 

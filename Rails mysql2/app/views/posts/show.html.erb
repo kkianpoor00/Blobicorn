@@ -1,2 +1,37 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <%= stylesheet_link_tag('admin') %>
+    <title>Errand Folks</title>
+  </head>
+
+
+  <body>
+
+    <div>
+
+      <nav class="navigation-bar">
+        <a href="/" class="bloblogo">
+          <%= image_tag("logo/blobicorn.png", :alt => 'blob', class: "logo") %>
+        </a>
+        <a href="#" class="navig">Offer a Service</a>
+        <a href="#" class="navig">Categories</a>
+        <a href="#" class="navig">Contact Us</a>
+
+      </nav>
+
+
+      <h2>Title: <%= @chosen_post.title %></h2>
+      <h2>category: <%= @chosen_post.category %></h2>
+      <h2>Type: <%= @chosen_post.kindOfPost %></h2>
+
+      <p>
+        Details: <%= @chosen_post.details %>
+      </p>
+
+      <%= link_to("Edit", edit_post_path(@chosen_post), :class => 'action edit') %>
+      <%= link_to("Delete", delete_post_path(@chosen_post), :class => 'action delete') %>
+
+  </body>
+</html>

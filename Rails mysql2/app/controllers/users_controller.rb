@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   def index
     @users = EfUser.sorted
     @user = EfUser.find_by_id(session[:user_id])
+    @posts = Post.sorted
   end
 
   def show
@@ -25,12 +26,9 @@ class UsersController < ApplicationController
     # end
 
     #to just get to login page
-    puts 'it comes here'
     if @user.save
-      puts 'it comes here too'
-      redirect_to(users_path(@user))
+      redirect_to(login_login_user_path)
     else
-      puts 'aaaaaaaaaaoooooooo'
       render('new')
     end
   end
@@ -69,6 +67,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:ef_user).permit(:first_name, :last_name, :email, :password)
+    params.require(:ef_user).permit(:post_id, :first_name, :last_name, :email, :password)
   end
 end

@@ -1,5 +1,7 @@
 class Post < ApplicationRecord
 
-  belongs_to :er_user
+  belongs_to :ef_user
+
+  scope :sorted, lambda { order("created_at DESC") }
 
 end
