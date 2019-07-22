@@ -1,14 +1,14 @@
 class CreatePosts < ActiveRecord::Migration[5.2]
   def up
     create_table :posts do |t|
-      t.integer "ef_user_id"
+      t.integer "user_id"
       t.string "title"
       t.string "category"
-      t.string "kindOfPost", :limit => 50
+      t.string "type", :limit => 50
       t.text "details"
       t.timestamps
     end
-    add_index("posts","ef_user_id")
+    add_index("posts","user_id")
   end
 
   def down
