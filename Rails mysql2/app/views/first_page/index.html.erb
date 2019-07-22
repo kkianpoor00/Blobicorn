@@ -70,14 +70,12 @@
 
       <div class="posts">
         <ul>
-          <% @posts.each do |p| %>
           <li>
             <%= link_to(post_path(p)) do %>
               <h2><%= p.title %></h2>
               <p><%= p.details %></p>
             <% end %>
           </li>
-          <% end %>
         </ul>
       </div>
     </div>

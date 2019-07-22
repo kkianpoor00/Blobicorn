@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styleMainTheme">
+    <title>Errand Folks</title>
+  </head>
+  <body>
+
+    <div class="main">
+      <div class="main_center">
+        <h1>Contact Us</h1>
+          <hr>
+          <p>Name:</p>
+          <input name="name" type="text">
+          <p>Email Address:</p>
+          <input name="email" type="text">
+          <p>Topic:</p>
+          <select name="topic">
+            <option value="account">Account</option>
+            <option value="account">Business</option>
+            <option value="account">Improvements to the Site</option>
+            <option value="account">Other</option>
+          </select>
+          <p>Question/Comment</p>
+          <textarea name="question" type="text" class="question_text">We might have to leave this functionality as it is so that doesn't actually send anything. It shouldn't be too hard to actually implement this though. If we make it work, admins should be able to see questions/comments somewhere. Maybe if you're logged in, you'll have the fields pre-filled out. </textarea>
+          <p>*all input fields are necessary</p>
+        <form>
+          <input type="submit" value="Submit" onclick= "alert('Thank you for your input'); window.location.href='/';" />
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
