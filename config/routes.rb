@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   get  'static_pages/home'
   get  'static_pages/help'
   get '/about', to: 'static_pages#about'
+  get '/career', to: 'static_pages#career'
+  get '/FAQ', to: 'static_pages#faq'
   # get  'static_pages/aboutUs'
   get  '/contact', to: 'static_pages#contact'
   get 'home', to: 'welcome#home', as: 'home'

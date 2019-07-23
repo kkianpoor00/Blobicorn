@@ -1,41 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <div class="show-post">
-  <h2 class="show-post-title h2">Post</h2>
+  <h2 class="show-post-title h2"><%= @post.title %></h2>
   <hr>
+    <p>
+      <strong>Service is:</strong>
+      <%= @post.service.option %>
+    </p>
 
-  <p>
-    <strong>Service is:</strong>
-    <%= @post.service.option %>
-  </p>
+    <p>
+      <strong>Category:</strong>
+      <%= @post.category.name %>
+    </p>
 
-  <p>
-    <strong>Title:</strong>
-    <%= @post.title %>
-  </p>
+    <p>
+      <strong>Location:</strong>
+      <%= @post.location.name %>
+    </p>
 
-  <p>
-    <strong>Category:</strong>
-    <%= @post.category.name %>
-  </p>
+    <p>
+      <strong>Body:</strong>
+      <%= @post.body %>
+     </p>
 
-  <p>
-    <strong>Location:</strong>
-    <%= @post.location.name %>
-  </p>
-
-  <p>
-    <strong>Body:</strong>
-    <%= @post.body %>
-   </p>
-
-   <div class="show-post-btns">
-      <% if signed_in? %>
-         <% if (current_user.email == @post.email) %>
-          <!-- < %= link_to 'Edit', edit_post_path(@post) %> | -->
-          <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-lg btn-secondary"%> |
+     <div class="show-post-btns">
+        <% if signed_in? %>
+           <% if (current_user.email == @post.email) %>
+            <!-- < %= link_to 'Edit', edit_post_path(@post) %> | -->
+            <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-lg btn-secondary"%> |
+          <% end %>
         <% end %>
-      <% end %>
-      <%= link_to 'Back', posts_path, class: "btn btn-lg btn-secondary" %>
-    </div>
+        <%= link_to 'Back', posts_path, class: "btn btn-lg btn-secondary" %>
+      </div>
 </div>
