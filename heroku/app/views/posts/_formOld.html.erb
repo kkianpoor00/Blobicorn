@@ -1,0 +1,59 @@
+<div class="create-post">
+  <%= form_with(model: post, local: true) do |form| %>
+    <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= "aaaaa" + message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+    <div class="field">
+      <%= form.label :service_id , class:"control-label"%>
+      <%= form.select :service_id, options_for_select([[ 'Offered', 1 ] , ['Requested', 2 ]]), class:"form-control"%>
+    </div>
+
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, class:"form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :category_id %>
+      <%= form.select :category_id, options_for_select([
+                      ['Transportation', 1 ], ['Food', 2],
+                      ['Auto', 3], ['Skilled Trade', 4], ['Labour', 5],
+                      ['Computers', 6], ['Technical Support', 7], ['Programming', 8],
+                      ['Finance', 9], ['Legal', 10],
+                      ['Education', 11], ['Medical', 12],
+                      ['Art', 13], ['Other', 14]
+                      ]), class:"form-control"%>
+
+    </div>
+
+    <div class="field">
+      <%= form.label :location_id %>
+      <%= form.select :location_id, options_for_select([
+                    ['Vancouver', 1 ], ['North Vancouver', 2], [ 'East Vancouver', 3 ], ['West Vancouver', 4],
+                    ['Burnaby', 5], ['New Westminster', 6], ['Coquitlam', 7], ['Port Coquitlam', 8], ['Port Moody', 9],
+                    ['Surrey', 10], ['White Rock', 11], ['Delta', 12], [ 'Langley', 13], ['Abbotsford', 14], ['Richmond', 15], ['Other', 16]
+                    ]) , class:"form-control"%>
+    </div>
+
+    <div class="field">
+      <%= form.label :body %>
+      <%= form.text_area :body, :cols => 70, :rows => 20 , class:"form-control"%>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Create Post" , class:"btn btn-lg btn-primary" %>
+    </div>
+  <% end %>
+
+  <!-- < %= link_to 'Back', posts_path, class: "btn btn-lg btn-secondary" %> -->
+</div>

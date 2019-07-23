@@ -1,0 +1,11 @@
+<h2 class="edit-posts-title h2">Editing Post</h2>
+
+<!-- < %= link_to 'Show', @post %> | -->
+<%= link_to 'Show', @post, class: "btn btn-lg btn-secondary"%> |
+<%= link_to 'Back', posts_path, class: "btn btn-lg btn-secondary" %>
+
+
+<%= render 'form', post: @post %>
+
+<!-- < %= link_to 'Show', @post %> | -->
+<!-- < %= link_to 'Back', posts_path %> -->
