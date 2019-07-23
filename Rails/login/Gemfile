@@ -6,7 +6,7 @@ ruby '2.5.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 
-group :development do
+group :development, :test do
   # See https://github.com/rails/execjs#readme for more supported runtimes
   gem 'duktape'
   # Use Puma as the app server
@@ -15,7 +15,7 @@ group :development do
 end
 
 # Use postgresql as the database for Active Record
-group :production, :test do
+group :production do
   gem 'pg'
 end
 
