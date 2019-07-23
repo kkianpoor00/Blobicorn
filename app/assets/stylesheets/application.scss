@@ -181,23 +181,24 @@ p {
 
 
 .post-wrapper p {
-  text-align: center;
+  text-align: left;
 }
 
 
 /* ---------------------- ABOUT PAGE SCSS ---------------------- */
 .about{
-  margin: 30px auto 50px;
-  padding-bottom: 10px;
-  text-align: center;
+
+  background-color: white;
+  min-height: 625px;
+
 }
 
 .about-center {
-  width: 750px;
-  padding-left: 0;
-  padding-right: 0;
+  width: 775px;
+  padding-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
+  min-height: 625px;
 }
 
 .about-title {
@@ -218,9 +219,8 @@ p {
 
 /* ---------------------- CONTACT/HELP PAGE SCSS ---------------------- */
 .contact{
-  margin: 30px auto 50px;
-  padding-bottom: 10px;
-  text-align: center;
+  background-color: white;
+  min-height: 625px;
 }
 
 .contact-center {
@@ -342,7 +342,7 @@ p {
    margin-right: auto;
  }
 .show-post p {
-  text-align: left;
+  text-align: center;
 }
 
 .show-post-btns {
@@ -366,6 +366,95 @@ p {
    margin-left: auto;
    text-align: center;
  }
+
+ /*---------------------POSTS SLIDESHOW, HOME PAGE------------------------*/
+ .posting{
+  margin:0;
+  padding:0;
+
+}
+.posting{
+  font-size:100%;
+  /*margin:3em;*/
+  /*background: white; */
+  background:#666;
+  color:#fff;
+  padding-bottom:50px;
+}
+
+
+.posts-title {
+  padding-top: 20px;
+  font-size: 52px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: white;
+  display: block;
+}
+
+
+/* slideshow */
+#slideshow {
+  overflow: hidden;
+  height: 500;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.post-wrapper {
+  width: 2100px;
+  -webkit-animation: slide 18s ease infinite;
+}
+
+.post {
+  float: left;
+  height: 500px;
+  width: 700px;
+  padding-top:10px;
+  background-color:#fffbcc;
+  color:black;
+
+}
+.post_head > img
+{
+  float:left;
+  margin-left:10px; 
+  margin-right:10px;
+}
+.post_head
+{
+  height:250px;
+  width:700px;
+  float:left;
+}
+.post_head > h2
+{
+  display: block; 
+  font-size: 2.0em; 
+  margin-top: 0; 
+  margin-bottom: 0.83em; 
+  margin-left: 0; 
+  margin-right: 0; 
+  font-weight: bold;
+  text-align:left;
+}
+.post_body
+{
+  margin:10px;
+  float:left;
+}
+
+@-webkit-keyframes slide {
+  0%  {margin-left: 0px;}
+  23% {margin-left: 0px;}
+  33% {margin-left: -700px;}
+  56% {margin-left: -700px;}
+  66% {margin-left: -1400px;}
+  89% {margin-left: -1400px;}
+  99% {margin-left: -0px;}
+  100% {margin-left: -0px;}
+}
 
 
  /* ---------------------- LOGIN/SIGNUP PAGE SCSS ---------------------- */
@@ -431,40 +520,70 @@ p {
 
 /*---------------------- footer -----------------------*/
 .footerContext{
-  /* background-color: #292c2f; */
+	/* background-color: #292c2f; */
   background-color: black;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: center;
-  font: normal 18px sans-serif;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font: normal 18px sans-serif;
 
-  padding: 45px;
-  margin-top: 80px;
+	padding: 45px;
+	margin-top: 80px;
 }
 
 .footerContext .footer-comp-motto{
-  color:  #8d9093;
-  font-size: 24px;
-  margin: 0;
+	color:  #8d9093;
+	font-size: 24px;
+	margin: 0;
 }
 
 .footerContext .footer-comp-name{
-  color:  #8f9296;
-  font-size: 14px;
-  margin: 0;
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
 }
 
 .footerContext .footer-links{
-  list-style: none;
-  font-weight: bold;
-  color:  #ffffff;
-  padding: 35px 0 23px;
-  margin: 0;
+	list-style: none;
+	font-weight: bold;
+	color:  #ffffff;
+	padding: 35px 0 23px;
+	margin: 0;
 }
 
 .footerContext .footer-links a{
-  display:inline-block;
-  text-decoration: none;
-  color: inherit;
+	display:inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+.main 
+{
+  background-color: white;
+  min-height: 625px;
+}
+.main_center
+{
+  width: 775px;
+
+  padding-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 625px;
+  text-align:left
+}
+.main_center>p
+{
+  text-align:left;
+}
+.main_center>h1
+{
+  text-align:left;
+}
+
+.question_text
+{
+  width:350px;
+  height:200px;
 }
