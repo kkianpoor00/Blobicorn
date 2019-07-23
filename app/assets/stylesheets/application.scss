@@ -404,7 +404,7 @@ p {
 
 .post-wrapper {
   width: 2100px;
-  -webkit-animation: slide 18s ease infinite;
+  -webkit-animation: slide 60s ease infinite;
 }
 
 .post {
@@ -448,11 +448,11 @@ p {
 @-webkit-keyframes slide {
   0%  {margin-left: 0px;}
   23% {margin-left: 0px;}
-  33% {margin-left: -700px;}
+  28% {margin-left: -700px;}
   56% {margin-left: -700px;}
-  66% {margin-left: -1400px;}
+  61% {margin-left: -1400px;}
   89% {margin-left: -1400px;}
-  99% {margin-left: -0px;}
+  94% {margin-left: -0px;}
   100% {margin-left: -0px;}
 }
 
