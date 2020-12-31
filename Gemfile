@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
-gem 'nokogiri', '1.10.3'
+gem 'nokogiri', '1.10.10'
 gem 'clearance'
 
 # Use ActiveStorage variant
